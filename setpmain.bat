@@ -16,6 +16,5 @@ echo. I think u need to add "Double quotes" & timeout 2 >NUL
 goto read
 :yourdestiny
 
-for /f "tokens=*" %%i in (%enterfilepath%) do set file=%%~nxi
-
-type %enterfilepath% >> "%homedrive%\users\%username%\desktop\%randum%.ganga.%file%"
+for %%i in (%enterfilepath%) do set file=%%~nxi
+type %enterfilepath% ^>^> "%homedrive%\users\%username%\desktop\%randum%.ganga.%file%"
